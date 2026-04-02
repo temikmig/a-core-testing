@@ -1,0 +1,21 @@
+.logoContainer {
+  position: relative;
+  right: 12px;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+}
+
+.loginCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  border-radius: 5px;
+  padding: 0px 0px 5px 0px;
+}

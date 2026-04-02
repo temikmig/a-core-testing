@@ -1,0 +1,9 @@
+.inputContainer {
+  position: relative;
+}
+
+.errorContainer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
