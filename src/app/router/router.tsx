@@ -1,11 +1,12 @@
-import { createBrowserRouter } from "react-router-dom";
+// import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import { LoginPage } from "@/pages/LoginPage";
 import { TreePage } from "@/pages/TreePage";
 import { ProtectedRoute } from "./ProtectedRoute";
 import { PublicOnlyRoute } from "./PublicOnlyRoute";
 import { AppLayout, AuthLayout } from "../layout";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     element: <AuthLayout />,
     children: [
