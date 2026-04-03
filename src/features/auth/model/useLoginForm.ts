@@ -1,20 +1,30 @@
 import { useForm } from "react-hook-form";
 import type { LoginVars } from "./types";
 import { useLogin } from "./useLogin";
+import { useNavigate } from "react-router-dom";
+import { getErrorMessage } from "@/shared/config";
 
 export const useLoginForm = () => {
+  const navigate = useNavigate();
   const { handleLogin, loading } = useLogin();
 
   const form = useForm<LoginVars>({
     defaultValues: {
-      email: "admin@admin.com",
-      password: "admin",
+      email: "",
+      password: "",
     },
   });
 
   const onSubmit = async (data: LoginVars) => {
-    await handleLogin(data.email, data.password);
-    // дальше позже добавим navigate("/")
+    try {
+      await handleLogin(data.email, data.password);
+      navigate("/");
+    } catch (e) {
+      form.setError("password", {
+        type: "manual",
+        message: getErrorMessage(e),
+      });
+    }
   };
 
   return {

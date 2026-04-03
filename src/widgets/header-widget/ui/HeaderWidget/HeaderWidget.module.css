@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1420px;
+  height: 50px;
+  position: sticky;
+  top: 0px;
+  z-index: 99;
+  background: var(--color-5);
+  padding: 0px 30px;
+}

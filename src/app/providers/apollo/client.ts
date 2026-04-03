@@ -2,9 +2,8 @@ import { ApolloClient, InMemoryCache, createHttpLink } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
 const httpLink = createHttpLink({
-  uri: "http://185.207.66.100:8080/graphql",
+  uri: import.meta.env.VITE_GRAPHQL_URL,
   fetch: (uri, options) => {
-    console.log("GRAPHQL CALL:", uri, options?.method);
     return fetch(uri, options);
   },
 });

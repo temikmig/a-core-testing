@@ -1,5 +1,5 @@
 import { useMutation } from "@apollo/client/react";
-import { LOGIN } from "./login";
+import { LOGIN } from "./login.query";
 import type { LoginResponse, LoginVars } from "./types";
 
 export const useLogin = () => {

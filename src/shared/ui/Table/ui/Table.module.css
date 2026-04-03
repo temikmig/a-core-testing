@@ -1,0 +1,28 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 6px 10px 9px 10px;
+  border-bottom: 1px solid var(--color-4);
+}
+
+tr:first-child td {
+  padding: 10px 10px 5px 10px;
+}
+
+tr:last-child td {
+  padding: 6px 10px 9px 10px;
+  border-bottom: 1px solid var(--color-4);
+}
+
+td {
+  padding: 6px 10px 5px 10px;
+}
+
+.checkboxCell {
+  width: 30px;
+  text-align: center;
+}

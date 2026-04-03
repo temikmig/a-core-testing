@@ -1,10 +1,11 @@
 import { Button, Stack, Text, TextAlign } from "@alphacore/ui-kit";
 import styles from "./LoginForm.module.css";
-import { FormInput } from "@/shared/ui";
+import { FormInput, FormPasswordInput } from "@/shared/ui";
 import { useLoginForm } from "../../model";
 
 export const LoginForm = () => {
   const { control, handleSubmit, onSubmit, loading } = useLoginForm();
+
   return (
     <Stack className={styles.loginFormContainer}>
       <Text
@@ -23,6 +24,7 @@ export const LoginForm = () => {
               control={control}
               label="Адрес электронной почты"
               placeholder="admin@ideavour.ru"
+              required
               rules={{
                 required: "Введите адрес электронной почты",
                 pattern: {
@@ -31,12 +33,10 @@ export const LoginForm = () => {
                 },
               }}
             />
-            <FormInput
+            <FormPasswordInput
               name="password"
               control={control}
               label="Пароль"
-              passwordField
-              required
               placeholder="********"
               rules={{
                 required: "Введите пароль",

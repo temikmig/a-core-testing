@@ -1,0 +1,12 @@
+.objectDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  flex: 1;
+}
+
+.inputDescription {
+  width: 100%;
+  height: 75px;
+}
