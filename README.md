@@ -21,6 +21,8 @@ React, TypeScript, GraphQL (Apollo Client), React Hook Form, Feature-Sliced Desi
 ## Запуск
 
 ```bash
+git clone https://github.com/temikmig/a-core-testing
+cd a-core-testing
 npm install
 npm run dev
 ```
