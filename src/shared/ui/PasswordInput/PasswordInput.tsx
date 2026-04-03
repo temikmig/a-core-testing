@@ -38,7 +38,7 @@ export const PasswordInput = ({
             onClick={() => setShow((v) => !v)}
             className={styles.toggle}
           >
-            {show ? <EyeOffIcon /> : <EyeIcon />}
+            {show ? <EyeIcon /> : <EyeOffIcon />}
           </button>
         </Stack>
 
